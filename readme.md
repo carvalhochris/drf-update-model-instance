@@ -15,6 +15,8 @@ class Artist(models.Model):
 
 
 ```
+from rest_framework import generics
+
 class RetrieveArtistUserView(generics.RetrieveUpdateAPIView):
     queryset = Artist.objects.all()
     serializer_class = RetrieveArtistMusicSerializer
@@ -47,5 +49,3 @@ urlpatterns = [
     "name": "Cheri Lyn",
     "other_things": []
 }
-
-
